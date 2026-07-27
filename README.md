@@ -55,6 +55,12 @@ The repository contains a central Spring Boot backend and dedicated Backend-for-
 **Infrastructure:** Docker, Docker Compose, NGINX
 **Testing:** JUnit, Mockito, Spring Boot Test
 
+## Repository Structure
+
+├── Spring Boot Backend
+├── React BFF
+└── Android BFF
+
 The BFF services are currently maintained within the same repository as the central backend.
 
 ## Running the Project
@@ -87,9 +93,9 @@ The application requires configuration for its external services. Environment-sp
 
 ## Testing
 
-The project contains unit and integration tests covering core business logic, controllers, repositories, authentication, session handling, shopping cart functionality, and other application components.
+The project contains unit tests.
 
 ## Project Context
 
-This repository contains the server-side components of a multi-client e-commerce system developed as a bachelor's thesis project. The complete system consists of this repository, a React web client, and an Android client.
+This repository contains the server-side components of a multi-client e-commerce system developed as a master's thesis project. The complete system consists of this repository, a React web client, and an Android client.
 
