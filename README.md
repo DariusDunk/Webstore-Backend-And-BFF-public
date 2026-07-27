@@ -17,10 +17,10 @@ The repository contains a central Spring Boot backend and dedicated Backend-for-
        ┌────────────┼────────────┐
        ▼            ▼            ▼
   React BFF    Android BFF    MinIO
-       │            │
-       └──────┬─────┘
-              ▼
-       Spring Boot Backend
+       │            │            ▲
+       └──────┬─────┘            │
+              ▼                  │
+       Spring Boot Backend───────┘
               │
      ┌────────┼─────────┐
      ▼        ▼         ▼
