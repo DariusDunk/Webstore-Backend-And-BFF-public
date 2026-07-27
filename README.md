@@ -6,28 +6,26 @@ The repository contains a central Spring Boot backend and dedicated Backend-for-
 
 ## Architecture
 
-```text
-┌─────────────────┐      ┌─────────────────┐
-│  React Client   │      │  Android Client │
-└────────┬────────┘      └────────┬────────┘
-         │                        │
-         ▼                        ▼
-┌─────────────────┐      ┌─────────────────┐
-│    React BFF    │      │   Android BFF   │
-└────────┬────────┘      └────────┬────────┘
-         │                        │
-         └──────────┬─────────────┘
-                    ▼
-           ┌─────────────────┐
-           │ Spring Boot API │
-           └────────┬────────┘
+```
+                   HTTPS
+                     │
+                     ▼
+                ┌────────┐
+                │ NGINX  │
+                └───┬────┘
                     │
        ┌────────────┼────────────┐
        ▼            ▼            ▼
-  PostgreSQL     Keycloak       MinIO
-                    │
-                    ▼
-             TensorFlow Serving
+  React BFF    Android BFF    MinIO
+       │            │
+       └──────┬─────┘
+              ▼
+       Spring Boot Backend
+              │
+     ┌────────┼─────────┐
+     ▼        ▼         ▼
+PostgreSQL Keycloak TensorFlow
+                       Serving
 ```
 
 ## Features
